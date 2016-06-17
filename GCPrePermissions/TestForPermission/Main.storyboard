@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJI-7g-Py4">
+                                <rect key="frame" x="20" y="20" width="280" height="521"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUU-E3-0KS">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RiN-Tp-9hH"/>
+                                        </constraints>
+                                        <state key="normal" title="Photo Permission">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPhotoPermissionsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZz-di-PZG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="uZF-hq-rKT">
+                                        <rect key="frame" x="0.0" y="52" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="g1p-jd-ofg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV4-a6-FmN">
+                                        <rect key="frame" x="0.0" y="100" width="280" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="7sk-ji-v9k"/>
+                                        </constraints>
+                                        <state key="normal" title="Contacts Permission">
+                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onContactsButtonPermissionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqt-6Z-DCE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="RRn-cp-Ivb">
+                                        <rect key="frame" x="0.0" y="152" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="5jw-Eg-xfU"/>
+                                            <constraint firstAttribute="height" constant="40" id="V48-mm-W3L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5jw-Eg-xfU"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEX-jw-Poy">
+                                        <rect key="frame" x="0.0" y="184" width="280" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vbN-UQ-8e8"/>
+                                        </constraints>
+                                        <state key="normal" title="Location Permission">
+                                            <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLocationButtonPermissionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dok-rf-V26"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="rNK-Zr-RvA">
+                                        <rect key="frame" x="0.0" y="236" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tYG-Qn-7m8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rp-AC-RO9">
+                                        <rect key="frame" x="0.0" y="284" width="280" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dqv-0w-RnY"/>
+                                        </constraints>
+                                        <state key="normal" title="PushNotification Permission">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPushNotificationPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZT-tg-JXE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fo-Fm-zuM">
+                                        <rect key="frame" x="0.0" y="322" width="282" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4Kl-tQ-s5X"/>
+                                        </constraints>
+                                        <state key="normal" title="MicrophonePermissions">
+                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMicrophonePermissionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IC-w0-qY3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-fh-uYR">
+                                        <rect key="frame" x="-1" y="360" width="133" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ETo-Q3-MBo"/>
+                                            <constraint firstAttribute="width" constant="133" id="qj0-zo-D95"/>
+                                        </constraints>
+                                        <state key="normal" title="Camera Permission">
+                                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCameraPermissionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aU-Vl-9om"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-dJ-4aE">
+                                        <rect key="frame" x="140" y="360" width="149" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="T46-HR-2uU"/>
+                                            <constraint firstAttribute="width" constant="149" id="Z8S-Ok-XBx"/>
+                                        </constraints>
+                                        <state key="normal" title="EventsPermissions">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEventsPermissionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBv-Ja-6io"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gFl-fh-uYR" firstAttribute="top" secondItem="1Fo-Fm-zuM" secondAttribute="bottom" constant="8" id="1WA-ux-j10"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rmy-dJ-4aE" secondAttribute="trailing" constant="-9" id="34o-RK-LqK"/>
+                                    <constraint firstAttribute="width" constant="280" id="3ey-a7-m3I"/>
+                                    <constraint firstAttribute="trailing" secondItem="RRn-cp-Ivb" secondAttribute="trailing" id="3ql-zK-FRi"/>
+                                    <constraint firstAttribute="trailing" secondItem="EV4-a6-FmN" secondAttribute="trailing" id="53G-xd-hUk"/>
+                                    <constraint firstItem="FUU-E3-0KS" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="5yQ-OZ-ILO"/>
+                                    <constraint firstItem="uZF-hq-rKT" firstAttribute="top" secondItem="FUU-E3-0KS" secondAttribute="bottom" constant="8" id="6QN-MR-Ob6"/>
+                                    <constraint firstItem="RRn-cp-Ivb" firstAttribute="top" secondItem="EV4-a6-FmN" secondAttribute="bottom" constant="8" id="8rr-ji-TFI"/>
+                                    <constraint firstItem="RRn-cp-Ivb" firstAttribute="bottom" secondItem="oEX-jw-Poy" secondAttribute="top" constant="8" id="GNB-jF-E2N"/>
+                                    <constraint firstItem="RRn-cp-Ivb" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="JpI-Ff-LHP"/>
+                                    <constraint firstAttribute="trailing" secondItem="1rp-AC-RO9" secondAttribute="trailing" id="LA4-2I-77I"/>
+                                    <constraint firstItem="Rmy-dJ-4aE" firstAttribute="top" secondItem="1Fo-Fm-zuM" secondAttribute="bottom" constant="8" id="Oah-Jg-EUS"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNK-Zr-RvA" secondAttribute="trailing" id="PWL-Ns-bHZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="FUU-E3-0KS" secondAttribute="trailing" id="Pvy-DI-cIA"/>
+                                    <constraint firstItem="rNK-Zr-RvA" firstAttribute="top" secondItem="oEX-jw-Poy" secondAttribute="bottom" constant="8" id="bW0-n3-c62"/>
+                                    <constraint firstItem="gFl-fh-uYR" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" constant="-1" id="bvj-av-axF"/>
+                                    <constraint firstItem="1Fo-Fm-zuM" firstAttribute="top" secondItem="1rp-AC-RO9" secondAttribute="bottom" constant="8" id="cFU-ke-zmQ"/>
+                                    <constraint firstItem="EV4-a6-FmN" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="cHR-do-FGM"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Fo-Fm-zuM" secondAttribute="trailing" constant="-2" id="fSk-4y-Qma"/>
+                                    <constraint firstItem="FUU-E3-0KS" firstAttribute="top" secondItem="sJI-7g-Py4" secondAttribute="top" id="hsy-Rk-9d3"/>
+                                    <constraint firstItem="uZF-hq-rKT" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="jxh-a7-iGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="oEX-jw-Poy" secondAttribute="trailing" id="nzf-vq-6Ls"/>
+                                    <constraint firstItem="rNK-Zr-RvA" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="oPv-rX-Rod"/>
+                                    <constraint firstItem="EV4-a6-FmN" firstAttribute="top" secondItem="uZF-hq-rKT" secondAttribute="bottom" constant="8" id="oUz-hw-RbO"/>
+                                    <constraint firstItem="oEX-jw-Poy" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="oZD-Uj-EmG"/>
+                                    <constraint firstItem="1rp-AC-RO9" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="pvZ-V0-rmK"/>
+                                    <constraint firstItem="1rp-AC-RO9" firstAttribute="top" secondItem="rNK-Zr-RvA" secondAttribute="bottom" constant="8" id="qcM-4C-Yaw"/>
+                                    <constraint firstAttribute="trailing" secondItem="uZF-hq-rKT" secondAttribute="trailing" id="wad-yZ-WO6"/>
+                                    <constraint firstItem="1Fo-Fm-zuM" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="z0o-Pj-fhs"/>
+                                    <constraint firstAttribute="bottom" secondItem="rNK-Zr-RvA" secondAttribute="bottom" id="zzB-ej-NA5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3ey-a7-m3I"/>
+                                        <exclude reference="zzB-ej-NA5"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sJI-7g-Py4" secondAttribute="trailing" constant="20" id="H68-on-sUl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sJI-7g-Py4" secondAttribute="bottom" constant="27" id="IYk-Fg-Ifa"/>
+                            <constraint firstItem="sJI-7g-Py4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bGj-mO-BYP"/>
+                            <constraint firstItem="sJI-7g-Py4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jv4-1u-M9L"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contactsPermissionResultLabel" destination="RRn-cp-Ivb" id="WE7-er-ZHy"/>
+                        <outlet property="locationPermissionResultLabel" destination="rNK-Zr-RvA" id="n0W-tI-fGn"/>
+                        <outlet property="photoPermissionResultLabel" destination="uZF-hq-rKT" id="rjJ-3t-1ji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
