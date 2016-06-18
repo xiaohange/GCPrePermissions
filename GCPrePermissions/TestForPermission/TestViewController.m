@@ -112,7 +112,7 @@
 - (IBAction)onEventsPermissionAction:(id)sender
 {
     GCPrePermissions *permissions = [GCPrePermissions sharedPermissions];
-    [permissions showEventPermissionsWithType:GCEventAuthorizationTypeEvent Title:@"日历设置" message:@"允许设置日历" denyButtonTitle:@"暂不" grantButtonTitle:@"设置" completionHandler:^(BOOL hasPermission, GCDialogResult userDialogResult, GCDialogResult systemDialogResult) {
+    [permissions showEventPermissionsWithType:GCEventAuthorizationTypeReminder Title:@"日历设置" message:@"允许设置日历" denyButtonTitle:@"暂不" grantButtonTitle:@"设置" completionHandler:^(BOOL hasPermission, GCDialogResult userDialogResult, GCDialogResult systemDialogResult) {
         NSLog(@"日历已设置");
     }];
     
