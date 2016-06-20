@@ -873,8 +873,10 @@ static GCPrePermissions *__sharedInstance;
 - (void)showNoAutherOrRefuseAutherWithMessage:(NSString*)message
 {
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
-        NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication]openURL:url];
+
+        UIAlertView *enterSettings = [[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"暂不" otherButtonTitles:@"设置", nil];
+        enterSettings.tag = 100;
+        [enterSettings show];
     }else{
     
         UIAlertView *photoAlertviews = [[UIAlertView alloc] initWithTitle:@"提示"message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
@@ -944,6 +946,13 @@ static GCPrePermissions *__sharedInstance;
         } else {
             // User granted access, now try to trigger the real location access
             // 暂且放放，等待完善GPS授权
+        }
+    }else if (alertView.tag == 100){
+        if (buttonIndex == 1) {
+            NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            [[UIApplication sharedApplication]openURL:url];
+        }else{
+            
         }
     }
 }
