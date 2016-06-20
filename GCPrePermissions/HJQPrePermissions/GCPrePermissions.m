@@ -259,7 +259,7 @@ static GCPrePermissions *__sharedInstance;
     } else if(status == GCAuthorizationStatusDenied){
         
         NSString *appName = kAppName;
-        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的“设置-通知”选项中，允许“%@”发送通知。",appName]];
+        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的“设置-通知”选项中，\r允许“%@”发送通知。",appName]];
     }else{
         if (completionHandler) {
             completionHandler((status == GCAuthorizationStatusUnDetermined),
@@ -389,7 +389,11 @@ static GCPrePermissions *__sharedInstance;
         [self.preAVPermissionAlertView show];
     } else if(status == AVAuthorizationStatusDenied) {
         NSString *appName = kAppName;
-        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，允许“%@”访问您的相册。",appName]];
+        if (mediaType == GCAVAuthorizationTypeCamera) {
+            [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，\r允许“%@”访问您的相册。",appName]];
+        }else{
+            [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-麦克风”选项中，允许“%@”访问您的麦克风。",appName]];
+        }
     }else{
         if (completionHandler) {
             completionHandler((status == AVAuthorizationStatusAuthorized),
@@ -499,7 +503,7 @@ static GCPrePermissions *__sharedInstance;
     } else if(status == ALAuthorizationStatusDenied){
        
         NSString *appName = kAppName;
-        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，允许“%@”访问您的相机。",appName]];
+        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，\r允许“%@”访问您的相机。",appName]];
     }else{
         if (completionHandler) {
             completionHandler((status == ALAuthorizationStatusAuthorized),
@@ -592,7 +596,7 @@ static GCPrePermissions *__sharedInstance;
     } else if(status ==GCContactsAuthorizationStatusDenied){
        
         NSString *appName = kAppName;
-        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-通讯录”选项中，允许“%@”访问您的通讯录。",appName]];
+        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-通讯录”选项中，\r允许“%@”访问您的通讯录。",appName]];
     }else{
         if (completionHandler) {
             completionHandler(status == GCContactsAuthorizationStatusAuthorized,
@@ -687,7 +691,7 @@ static GCPrePermissions *__sharedInstance;
         if (eventType == GCEventAuthorizationTypeEvent) {
     
             NSString *appName = kAppName;
-            [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-日历”选项中，允许“%@”访问您的日历。",appName]];
+            [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-日历”选项中，\r允许“%@”访问您的日历。",appName]];
         }else{
        
             NSString *appName = kAppName;
@@ -788,7 +792,7 @@ static GCPrePermissions *__sharedInstance;
     } else if(status == kCLAuthorizationStatusDenied){
       
         NSString *appName = kAppName;
-        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-位置”选项中，允许“%@”访问您的位置。",appName]];
+        [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-位置”选项中，\r允许“%@”访问您的位置。",appName]];
     }else{
         if (completionHandler) {
             completionHandler(([self locationAuthorizationStatusPermitsAccess:status]),
@@ -865,14 +869,14 @@ static GCPrePermissions *__sharedInstance;
 #pragma mark Public UIAlertView Show
 - (void)showNoAutherOrRefuseAutherWithMessage:(NSString*)message
 {
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
-        NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
-        [[UIApplication sharedApplication]openURL:url];
-    }else{
-        
+//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+//        NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+//        [[UIApplication sharedApplication]openURL:url];
+//    }else{
+    
         UIAlertView *photoAlertviews = [[UIAlertView alloc] initWithTitle:@"提示"message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [photoAlertviews show];
-   }
+//   }
 }
 
 #pragma mark - UIAlertViewDelegate
