@@ -26,7 +26,7 @@
                                             <constraint firstAttribute="height" constant="30" id="RiN-Tp-9hH"/>
                                         </constraints>
                                         <state key="normal" title="Photo Permission">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onPhotoPermissionsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZz-di-PZG"/>
@@ -47,7 +47,7 @@
                                             <constraint firstAttribute="height" constant="30" id="7sk-ji-v9k"/>
                                         </constraints>
                                         <state key="normal" title="Contacts Permission">
-                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onContactsButtonPermissionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqt-6Z-DCE"/>
@@ -74,7 +74,7 @@
                                             <constraint firstAttribute="height" constant="30" id="vbN-UQ-8e8"/>
                                         </constraints>
                                         <state key="normal" title="Location Permission">
-                                            <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onLocationButtonPermissionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dok-rf-V26"/>
@@ -90,54 +90,54 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fo-Fm-zuM">
-                                        <rect key="frame" x="0.0" y="376" width="282" height="30"/>
+                                        <rect key="frame" x="0.0" y="355" width="282" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="4Kl-tQ-s5X"/>
                                         </constraints>
                                         <state key="normal" title="MicrophonePermissions">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onMicrophonePermissionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IC-w0-qY3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-fh-uYR">
-                                        <rect key="frame" x="0.0" y="416" width="133" height="30"/>
+                                        <rect key="frame" x="0.0" y="395" width="133" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ETo-Q3-MBo"/>
                                             <constraint firstAttribute="width" constant="133" id="qj0-zo-D95"/>
                                         </constraints>
                                         <state key="normal" title="Camera Permission">
-                                            <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onCameraPermissionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2aU-Vl-9om"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-dJ-4aE">
-                                        <rect key="frame" x="141" y="416" width="149" height="30"/>
+                                        <rect key="frame" x="141" y="395" width="149" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="T46-HR-2uU"/>
                                             <constraint firstAttribute="width" constant="149" id="Z8S-Ok-XBx"/>
                                         </constraints>
                                         <state key="normal" title="EventsPermissions">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="onEventsPermissionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBv-Ja-6io"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多权限：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK9-c0-i7s">
-                                        <rect key="frame" x="76" y="305" width="130" height="21"/>
+                                        <rect key="frame" x="76" y="284" width="130" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="epY-1D-jDw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rp-AC-RO9">
-                                        <rect key="frame" x="0.0" y="336" width="280" height="30"/>
+                                        <rect key="frame" x="0.0" y="315" width="280" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dqv-0w-RnY"/>
                                         </constraints>
@@ -159,7 +159,7 @@
                                     <constraint firstItem="FUU-E3-0KS" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="5yQ-OZ-ILO"/>
                                     <constraint firstItem="uZF-hq-rKT" firstAttribute="top" secondItem="FUU-E3-0KS" secondAttribute="bottom" constant="8" id="6QN-MR-Ob6"/>
                                     <constraint firstItem="RRn-cp-Ivb" firstAttribute="top" secondItem="EV4-a6-FmN" secondAttribute="bottom" constant="8" id="8rr-ji-TFI"/>
-                                    <constraint firstItem="VK9-c0-i7s" firstAttribute="top" secondItem="rNK-Zr-RvA" secondAttribute="bottom" constant="21" id="BMD-fn-Zy0"/>
+                                    <constraint firstItem="VK9-c0-i7s" firstAttribute="top" secondItem="rNK-Zr-RvA" secondAttribute="bottom" id="BMD-fn-Zy0"/>
                                     <constraint firstItem="RRn-cp-Ivb" firstAttribute="bottom" secondItem="oEX-jw-Poy" secondAttribute="top" constant="8" id="GNB-jF-E2N"/>
                                     <constraint firstItem="RRn-cp-Ivb" firstAttribute="leading" secondItem="sJI-7g-Py4" secondAttribute="leading" id="JpI-Ff-LHP"/>
                                     <constraint firstAttribute="trailing" secondItem="1rp-AC-RO9" secondAttribute="trailing" id="LA4-2I-77I"/>
