@@ -538,6 +538,7 @@
 				1156DEA91D13C4A2006BE147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1156DEAA1D13C4A2006BE147 /* Build configuration list for PBXNativeTarget "GCPrePermissionsTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +547,7 @@
 				1156DEAC1D13C4A2006BE147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1156DEAD1D13C4A2006BE147 /* Build configuration list for PBXNativeTarget "GCPrePermissionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +556,7 @@
 				1156DEAF1D13C4A2006BE147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
