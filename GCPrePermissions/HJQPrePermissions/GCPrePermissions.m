@@ -19,7 +19,6 @@ typedef NS_ENUM(NSInteger, GCTitleType) {
 #import <CoreLocation/CoreLocation.h>
 #import <AVFoundation/AVFoundation.h>
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define kAppName  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0
 //at least iOS 9 code here
@@ -257,8 +256,9 @@ static GCPrePermissions *__sharedInstance;
                                                                        otherButtonTitles:grantButtonTitle, nil];
         [self.prePushNotificationPermissionAlertView show];
     } else if(status == GCAuthorizationStatusDenied){
-        
-        NSString *appName = kAppName;
+
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的“设置-通知”选项中，\r允许“%@”发送通知。",appName]];
     }else{
         if (completionHandler) {
@@ -388,7 +388,8 @@ static GCPrePermissions *__sharedInstance;
         self.preAVPermissionAlertView.tag = mediaType;
         [self.preAVPermissionAlertView show];
     } else if(status == AVAuthorizationStatusDenied) {
-        NSString *appName = kAppName;
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         if (mediaType == GCAVAuthorizationTypeCamera) {
             [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，\r允许“%@”访问您的相册。",appName]];
         }else{
@@ -501,8 +502,9 @@ static GCPrePermissions *__sharedInstance;
                                                             otherButtonTitles:grantButtonTitle, nil];
         [self.prePhotoPermissionAlertView show];
     } else if(status == ALAuthorizationStatusDenied){
-       
-        NSString *appName = kAppName;
+        
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机”选项中，\r允许“%@”访问您的相机。",appName]];
     }else{
         if (completionHandler) {
@@ -595,7 +597,8 @@ static GCPrePermissions *__sharedInstance;
         [self.preContactPermissionAlertView show];
     } else if(status ==GCContactsAuthorizationStatusDenied){
        
-        NSString *appName = kAppName;
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-通讯录”选项中，\r允许“%@”访问您的通讯录。",appName]];
     }else{
         if (completionHandler) {
@@ -688,13 +691,12 @@ static GCPrePermissions *__sharedInstance;
         self.preEventPermissionAlertView.tag = eventType;
         [self.preEventPermissionAlertView show];
     } else if(status == EKAuthorizationStatusDenied){
+        
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         if (eventType == GCEventAuthorizationTypeEvent) {
-    
-            NSString *appName = kAppName;
             [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-日历”选项中，\r允许“%@”访问您的日历。",appName]];
         }else{
-       
-            NSString *appName = kAppName;
             [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-提醒事项”选项中，允许“%@”访问您的提醒事项。",appName]];
         }
     }else{
@@ -791,7 +793,8 @@ static GCPrePermissions *__sharedInstance;
         [self.preLocationPermissionAlertView show];
     } else if(status == kCLAuthorizationStatusDenied){
       
-        NSString *appName = kAppName;
+        NSString *appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleDisplayName"];
+        if (!appName) appName = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleName"];
         [self showNoAutherOrRefuseAutherWithMessage:[NSString stringWithFormat:@"请在iPhone的”设置-隐私-位置”选项中，\r允许“%@”访问您的位置。",appName]];
     }else{
         if (completionHandler) {
@@ -869,14 +872,14 @@ static GCPrePermissions *__sharedInstance;
 #pragma mark Public UIAlertView Show
 - (void)showNoAutherOrRefuseAutherWithMessage:(NSString*)message
 {
-//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
-//        NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
-//        [[UIApplication sharedApplication]openURL:url];
-//    }else{
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+        NSURL*url=[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication]openURL:url];
+    }else{
     
         UIAlertView *photoAlertviews = [[UIAlertView alloc] initWithTitle:@"提示"message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [photoAlertviews show];
-//   }
+   }
 }
 
 #pragma mark - UIAlertViewDelegate
