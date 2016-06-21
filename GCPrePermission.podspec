@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/XiaoHanGe/GCPrePermissions.git", :tag => s.version.to_s}
   s.source_files  = "GCPrePermission/**/*.{h,m}"
   s.public_header_files = "GCPrePermission/**/*.h"
-  s.frameworks = "CoreGraphics", "AnotherFramework"
+  s.frameworks = "CoreGraphics", "AssetsLibrary", "EventKit", "CoreLocation", "AddressBook", "AVFoundation"
   s.requires_arc = true
 end
