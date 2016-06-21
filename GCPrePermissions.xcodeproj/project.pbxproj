@@ -12,13 +12,13 @@
 		1156DE8D1D13C4A2006BE147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1156DE8B1D13C4A2006BE147 /* LaunchScreen.storyboard */; };
 		1156DE981D13C4A2006BE147 /* GCPrePermissionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE971D13C4A2006BE147 /* GCPrePermissionsTests.m */; };
 		1156DEA31D13C4A2006BE147 /* GCPrePermissionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156DEA21D13C4A2006BE147 /* GCPrePermissionsUITests.m */; };
-		1156DEB71D13C5C5006BE147 /* GCPrePermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156DEB61D13C5C5006BE147 /* GCPrePermissions.m */; };
 		1156DEBB1D13CB34006BE147 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1156DEBA1D13CB34006BE147 /* Foundation.framework */; };
 		1156DEBD1D13CB3F006BE147 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1156DEBC1D13CB3F006BE147 /* CoreGraphics.framework */; };
 		1156DEBF1D13CB46006BE147 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1156DEBE1D13CB46006BE147 /* UIKit.framework */; };
 		1156DECB1D13D04A006BE147 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156DEC71D13D04A006BE147 /* AppDelegate.m */; };
 		1156DECC1D13D04A006BE147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1156DEC81D13D04A006BE147 /* Main.storyboard */; };
 		1156DECD1D13D04A006BE147 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1156DECA1D13D04A006BE147 /* TestViewController.m */; };
+		11F7628C1D18C5BC007877DE /* GCPrePermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7628B1D18C5BC007877DE /* GCPrePermissions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 		1156DE9E1D13C4A2006BE147 /* GCPrePermissionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCPrePermissionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1156DEA21D13C4A2006BE147 /* GCPrePermissionsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCPrePermissionsUITests.m; sourceTree = "<group>"; };
 		1156DEA41D13C4A2006BE147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1156DEB51D13C5C5006BE147 /* GCPrePermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPrePermissions.h; sourceTree = "<group>"; };
-		1156DEB61D13C5C5006BE147 /* GCPrePermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPrePermissions.m; sourceTree = "<group>"; };
 		1156DEB81D13C633006BE147 /* GCPrePermissions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCPrePermissions-Prefix.pch"; sourceTree = "<group>"; };
 		1156DEBA1D13CB34006BE147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1156DEBC1D13CB3F006BE147 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +59,8 @@
 		1156DEC81D13D04A006BE147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1156DEC91D13D04A006BE147 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		1156DECA1D13D04A006BE147 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		11F7628A1D18C5BC007877DE /* GCPrePermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPrePermissions.h; sourceTree = "<group>"; };
+		11F7628B1D18C5BC007877DE /* GCPrePermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPrePermissions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		1156DE7C1D13C4A1006BE147 /* GCPrePermissions */ = {
 			isa = PBXGroup;
 			children = (
-				1156DEB41D13C5C5006BE147 /* HJQPrePermissions */,
+				11F762891D18C5BC007877DE /* HJQPrePermissions */,
 				1156DEC51D13D04A006BE147 /* TestForPermission */,
 				1156DE891D13C4A1006BE147 /* Assets.xcassets */,
 				1156DE8B1D13C4A2006BE147 /* LaunchScreen.storyboard */,
@@ -152,15 +152,6 @@
 			path = GCPrePermissionsUITests;
 			sourceTree = "<group>";
 		};
-		1156DEB41D13C5C5006BE147 /* HJQPrePermissions */ = {
-			isa = PBXGroup;
-			children = (
-				1156DEB51D13C5C5006BE147 /* GCPrePermissions.h */,
-				1156DEB61D13C5C5006BE147 /* GCPrePermissions.m */,
-			);
-			path = HJQPrePermissions;
-			sourceTree = "<group>";
-		};
 		1156DEB91D13CB1E006BE147 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +172,15 @@
 				1156DEC81D13D04A006BE147 /* Main.storyboard */,
 			);
 			path = TestForPermission;
+			sourceTree = "<group>";
+		};
+		11F762891D18C5BC007877DE /* HJQPrePermissions */ = {
+			isa = PBXGroup;
+			children = (
+				11F7628A1D18C5BC007877DE /* GCPrePermissions.h */,
+				11F7628B1D18C5BC007877DE /* GCPrePermissions.m */,
+			);
+			path = HJQPrePermissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,9 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1156DEB71D13C5C5006BE147 /* GCPrePermissions.m in Sources */,
 				1156DE7F1D13C4A1006BE147 /* main.m in Sources */,
 				1156DECD1D13D04A006BE147 /* TestViewController.m in Sources */,
+				11F7628C1D18C5BC007877DE /* GCPrePermissions.m in Sources */,
 				1156DECB1D13D04A006BE147 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
