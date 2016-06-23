@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "GCPrePermission"
-  s.version      = "0.0.1"
-  s.summary      = "A monitoring system for albums, system cameras, microphones, positioning, calendar, reminders, system notifications, contacts and other rights, access to the authorized tool of GCPrePermission."
+  s.version      = "0.0.2"
+  s.summary      = "A albums, system cameras, microphones, positioning, calendar, reminders ate authorized tool of GCPrePermission."
   s.homepage     = "https://github.com/XiaoHanGe/GCPrePermissions"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "韩俊强" => "532167805@qq.com" }
